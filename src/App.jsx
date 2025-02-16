@@ -3,7 +3,7 @@ import './App.css'
 import CoffeeCard from './CoffeeCard';
 import { useState } from 'react';
 import Banner from './components/Banner';
-
+import Cap from './components/Cap';
 function App() {
 
   const loadedCoffees = useLoaderData();
@@ -25,6 +25,9 @@ function App() {
             ></CoffeeCard>)
           }
         </div>
+        <div className='bg-addCoffee py-10 my-5'>
+            <Cap></Cap>
+            </div>
       </div>
     </>
   )

@@ -11,6 +11,10 @@ import UpdateCoffee from './components/UpdateCoffee';
 
 import Error from './components/Error';
 import Home from './Home';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import AuthProvider from './provider/AuthProvider';
+import Users from './components/Users';
 
 
 const router = createBrowserRouter([
@@ -22,7 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    loader: () => fetch('http://localhost:5000/coffee'),
+    loader: () => fetch('https://server-omega-ecru-61.vercel.app/coffee'),
   },
   {
     path: '/',
@@ -35,8 +39,21 @@ const router = createBrowserRouter([
   {
     path: '/updateCoffee/:id',
     element: <UpdateCoffee></UpdateCoffee>,
-    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+    loader: ({ params }) => fetch(`https://server-omega-ecru-61.vercel.app/${params.id}`),
     },
+    {
+      path: '/signup',
+      element: <SignUp></SignUp>
+    },
+    {
+      path: '/signin',
+      element: <SignIn></SignIn>
+    },
+    {
+      path : '/users',
+      element : <Users></Users>,
+      loader : ()=>  fetch('https://server-omega-ecru-61.vercel.app/users')
+    }
   ]
 },
 ]);
@@ -44,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
