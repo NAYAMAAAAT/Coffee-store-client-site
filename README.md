@@ -1,8 +1,34 @@
-# React + Vite
+# Coffee Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Coffee Site is a full-stack MERN application that allows users to manage their coffee inventory. Users can add, update, and delete coffee entries using CRUD operations. The application also features user authentication powered by Firebase, ensuring secure access to the platform.
 
-Currently, two official plugins are available:
+- **Live Project Link:** [Live Demo] : https://your-coffee-house.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- User authentication with Firebase
+- Add new coffee entries
+- Update existing coffee details
+- Delete coffee entries
+- Responsive design for mobile and desktop
+
+## Technologies Used
+- **Frontend:** React, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** Firebase
+
+
+## Core Features
+- **User  Authentication:** Secure login and registration using Firebase.
+- **CRUD Operations:** Easily manage coffee entries with add, update, and delete functionalities.
+- **Responsive Design:** Works seamlessly on both mobile and desktop devices.
+
+## Dependencies
+- React
+- Firebase
+- Axios
+- Express
+- Mongoose
+- Cors
+- dotenv
